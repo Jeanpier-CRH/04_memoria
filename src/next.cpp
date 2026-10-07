@@ -32,8 +32,8 @@ void nextFit(int blockSize[], int m, int processSize[], int n) {
 }
 
 int main() {
-    int blockSize[] = {14, 11, 54, 13};
-    int processSize[] = {10, 25, 33, 50};
+    int blockSize[] = {100, 500, 200, 300, 600};
+    int processSize[] = {212, 417, 112, 301};
     int m = sizeof(blockSize) / sizeof(blockSize[0]);
     int n = sizeof(processSize) / sizeof(processSize[0]);
     nextFit(blockSize, m, processSize, n);
