@@ -1,0 +1,59 @@
+# Ejecutables
+*.out
+*.app
+*.exe
+*.elf
+
+# Archivos de objetos y compilación
+*.o
+*.obj
+*.lo
+*.slo
+*.d
+
+# Cabeceras precompiladas
+*.gch
+*.pch
+
+# Librerías estáticas y dinámicas
+*.a
+*.lib
+*.so
+*.dylib
+*.dll
+*.lai
+*.la
+
+# Archivos de depuración y enlaces
+*.ilk
+*.pdb
+*.dwo
+*.su
+
+# Directorios de compilación y CMake
+build/
+bin/
+obj/
+out/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+compile_commands.json
+
+# Cachés y pruebas
+.cache/
+Testing/
+vcpkg_installed/
+
+# Archivos de editores e IDEs (VS Code, Visual Studio, CLion)
+.vscode/
+.idea/
+*.suo
+*.user
+*.filters
+*.sln.docstates
+
+# Basura del sistema operativo
+.DS_Store
+Thumbs.db
