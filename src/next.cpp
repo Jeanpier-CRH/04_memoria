@@ -6,18 +6,21 @@ void nextFit(int blockSize[], int m, int processSize[], int n) {
     for (int i = 0; i < n; i++)
         allocation[i] = -1;
 
-    int j = 0;
+    int j = 0; // Puntero que recuerda la última posición
+
     for (int i = 0; i < n; i++) {
-        while (j < m) {
-            if (blockSize[j] >= processSize[i]) {
-                allocation[i] = j;
-                blockSize[j] -= processSize[i];
+        int count = 0;
+        while (count < m) {
+            int idx = j % m; 
+            if (blockSize[idx] >= processSize[i]) {
+                allocation[i] = idx;
+                blockSize[idx] -= processSize[i];
+                j = idx + 1; // Avanza al siguiente bloque para el próximo proceso
                 break;
             }
             j++;
+            count++;
         }
-        if (j == m)
-            j = 0;
     }
 
     cout << "No. Proceso\tTamano de proceso\tNo. Bloque Asignado" << endl;
